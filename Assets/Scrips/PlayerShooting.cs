@@ -3,31 +3,22 @@ using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public float turnSpeed;
-
-    public float rotateSpeed;
-
-    InputAction RotateAction;
-
-    InputAction turnAction;
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform bulletSpawnPos;
 
     
 
+    InputAction shootAction;
     private void Awake()
     {
-        turnAction = InputSystem.actions.FindAction("Turn");
-       RotateAction = InputSystem.actions.FindAction("Rotate");
-
+        shootAction = InputSystem.actions.FindAction("Shoot");
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Vector2 turnInput = turnAction.ReadValue<Vector2>();
-        transform.Rotate(0, 0, turnInput.x * turnSpeed * Time.fixedDeltaTime);
-
-        Vector2 rotateInput = RotateAction.ReadValue<Vector2>();
-        transform.Rotate(0,0, rotateInput.x * rotateSpeed * Time.fixedDeltaTime);
-
-       
+        if (shootAction.WasPressedThisFrame())
+        {
+            //Vector2 direction = 
+        }
     }
 }
