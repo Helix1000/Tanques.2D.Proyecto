@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2158014928440689975, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.71
       objectReference: {fileID: 0}
     - target: {fileID: 2158014928440689975, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 2158014928440689975, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52,13 +52,29 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: -500
       objectReference: {fileID: 0}
+    - target: {fileID: 4506505090218901295, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2096057
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506505090218901295, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18396229
+      objectReference: {fileID: 0}
     - target: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_Name
-      value: Tank verde Variant
+      value: Tank verde
       objectReference: {fileID: 0}
     - target: {fileID: 5570796222133783037, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287769465702451746, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287769465702451746, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: m_Color.r
+      value: 0.52403545
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3756402472216939691, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
