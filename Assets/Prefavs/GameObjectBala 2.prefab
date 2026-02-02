@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5692450128174631664}
   - component: {fileID: 5222862986646020096}
   m_Layer: 0
-  m_Name: GameObjectBala
-  m_TagString: Bala
+  m_Name: GameObjectBala 2
+  m_TagString: Bala2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.011986852, y: -0.035256445}
+  m_Offset: {x: 0.009471059, y: -0.035256445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,7 +106,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.52833915, y: 0.18006074}
+  m_Size: {x: 0.52137065, y: 0.18006074}
   m_EdgeRadius: 0
 --- !u!114 &5692450128174631664
 MonoBehaviour:

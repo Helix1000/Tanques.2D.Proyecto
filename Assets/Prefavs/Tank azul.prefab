@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2158014928440689975, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.71
+      value: -0.867
       objectReference: {fileID: 0}
     - target: {fileID: 2158014928440689975, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: -1.17077
       objectReference: {fileID: 0}
     - target: {fileID: 2158014928440689975, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52,87 +52,97 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: -500
       objectReference: {fileID: 0}
+    - target: {fileID: 3112084196648995637, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 5692450128174631664, guid: d9d6616fd5621e6408ca38169a0e16b9, type: 3}
+    - target: {fileID: 4506505090218901295, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 425a28ff8805cda40a42e12dbf6e8804, type: 3}
     - target: {fileID: 4506505090218901295, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_Color.b
-      value: 0.2096057
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4506505090218901295, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_Color.r
-      value: 0.18396229
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_Name
-      value: Tank verde
+      value: Tank azul
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5570796222133783037, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.23
+      value: -0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7219370346114808373, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 5692450128174631664, guid: cacd0f57f3f6110418a41540add3c853, type: 3}
+    - target: {fileID: 7287769465702451746, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: adc1627ae4b304042a039c41f2ed7f7f, type: 3}
     - target: {fileID: 7287769465702451746, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_Color.b
-      value: 0.4481132
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7287769465702451746, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_Color.r
-      value: 0.52403545
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3756402472216939691, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+    - {fileID: 4716521602891478095, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+    - {fileID: 7219370346114808373, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2551912755236238515}
+      addedObject: {fileID: 4401049113598863213}
   m_SourcePrefab: {fileID: 100100000, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
 --- !u!1 &6246028662914607840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
   m_PrefabInstance: {fileID: 2068030372580999921}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &2551912755236238515
-BoxCollider2D:
+--- !u!114 &4401049113598863213
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6246028662914607840}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.0016494095, y: -0.009896472}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.5018783, y: 0.48538432}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

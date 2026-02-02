@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerShooting : MonoBehaviour
+public class PlayerShooting2 : MonoBehaviour
 {
     [SerializeField] Bullet bulletPrefab;
     [SerializeField] Transform bulletSpawnPos;
@@ -16,7 +16,6 @@ public class PlayerShooting : MonoBehaviour
     {
 
         shootAction = InputSystem.actions.FindAction("Shoot");
-
 
     }
 

@@ -9,5 +9,6 @@ EditorBuildSettings:
     path: Assets/_Tanks/Tutorial_Demo/Demo_Scenes/Demo_Game_Moon.unity
     guid: 7d48af2f9c7c14840abfc5e21827efaa
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 224e3a4d396a89745a3a053e798b8fc5, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0
