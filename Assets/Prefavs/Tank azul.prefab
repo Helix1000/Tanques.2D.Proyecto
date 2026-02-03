@@ -49,6 +49,10 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3112084196648995637, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: cadencia
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112084196648995637, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: moveSpeed
       value: -500
       objectReference: {fileID: 0}
