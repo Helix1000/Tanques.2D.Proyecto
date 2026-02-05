@@ -293,7 +293,7 @@ MonoBehaviour:
   moveSpeed: -500
   rotateSpeed: 500
   giroSpeed: 500
-  cadencia: 0.45
+  cadencia: 0.3
   siguienteDisparo: 0
   ancla: {fileID: 6891968168819677424}
 --- !u!61 &2390228488046812697
