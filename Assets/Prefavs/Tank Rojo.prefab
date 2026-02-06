@@ -78,7 +78,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 4f7fb2e3d2979044095aa410f8d19bda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: de34cdf5ec978914ca999ec6480399cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 3112084196648995637}
   - component: {fileID: 2390228488046812697}
   - component: {fileID: 1044068501909763005}
+  - component: {fileID: 7136302975883537107}
   m_Layer: 0
   m_Name: Tank Rojo
   m_TagString: Player
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18062e5fbae176244843d6c198ffda1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  bulletPrefab: {fileID: 5692450128174631664, guid: cacd0f57f3f6110418a41540add3c853, type: 3}
+  bulletPrefab: {fileID: 5692450128174631664, guid: d9d6616fd5621e6408ca38169a0e16b9, type: 3}
   bulletSpawnPos: {fileID: 5570796222133783037}
   turnSpeed: -500
   moveSpeed: -500
@@ -472,6 +473,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7136302975883537107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5340503156608870417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d114fb0aa8875204e9fa87bd698bd2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDestuction
 --- !u!1 &6891968168819677424
 GameObject:
   m_ObjectHideFlags: 0

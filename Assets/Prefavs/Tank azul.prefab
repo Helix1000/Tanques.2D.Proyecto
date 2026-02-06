@@ -59,7 +59,7 @@ PrefabInstance:
     - target: {fileID: 3112084196648995637, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 5692450128174631664, guid: d9d6616fd5621e6408ca38169a0e16b9, type: 3}
+      objectReference: {fileID: 5692450128174631664, guid: cacd0f57f3f6110418a41540add3c853, type: 3}
     - target: {fileID: 4506505090218901295, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 5570796222133783037, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: m_LocalPosition.y
@@ -108,12 +108,16 @@ PrefabInstance:
     - {fileID: 3756402472216939691, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
     - {fileID: 4716521602891478095, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
     - {fileID: 7219370346114808373, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+    - {fileID: 7136302975883537107, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4401049113598863213}
+    - targetCorrespondingSourceObject: {fileID: 5340503156608870417, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7233891483009531435}
   m_SourcePrefab: {fileID: 100100000, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
 --- !u!1 &6246028662914607840 stripped
 GameObject:
@@ -150,3 +154,15 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-7233891483009531435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6246028662914607840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d114fb0aa8875204e9fa87bd698bd2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDestuction
