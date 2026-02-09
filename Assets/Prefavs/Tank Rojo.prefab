@@ -290,10 +290,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   bulletPrefab: {fileID: 5692450128174631664, guid: d9d6616fd5621e6408ca38169a0e16b9, type: 3}
   bulletSpawnPos: {fileID: 5570796222133783037}
-  turnSpeed: -500
-  moveSpeed: -500
+  turnSpeed: -200
+  moveSpeed: -200
   rotateSpeed: 500
-  giroSpeed: 500
+  giroSpeed: 200
   cadencia: 0.3
   siguienteDisparo: 0
   ancla: {fileID: 6891968168819677424}

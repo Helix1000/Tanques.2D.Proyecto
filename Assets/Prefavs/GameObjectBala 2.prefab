@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   speed: -6
-  baunces: 1
+  baunces: 2
 --- !u!212 &5222862986646020096
 SpriteRenderer:
   m_ObjectHideFlags: 0

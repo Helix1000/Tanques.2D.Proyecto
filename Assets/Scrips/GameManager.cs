@@ -41,18 +41,24 @@ public class GameManager : MonoBehaviour
             punto1.SetActive(true);
             p1.SetActive(true);
             button.SetActive(true);
+            Time.timeScale = 0f;
         }
         else if (puntos == 2)
         {
+            punto1.SetActive(true);
             punto2.SetActive(true);
             p1.SetActive(true);
             button.SetActive(true);
+            Time.timeScale = 0f;
         }
         else if (puntos == 3)
         {
+            punto1.SetActive(true);
+            punto2.SetActive(true);
             punto3.SetActive(true);
             p1.SetActive(true);
             button.SetActive(true);
+            Time.timeScale = 0f;
         }
 
 
@@ -60,23 +66,29 @@ public class GameManager : MonoBehaviour
     public void GanarRonda2()
     {
         puntos2++;
-        if (puntos == 1)
+        if (puntos2 == 1)
         {
             punto4.SetActive(true);
             p2.SetActive(true);
             button.SetActive(true);
+            Time.timeScale = 0f;
         }
-        else if (puntos == 2)
+        else if (puntos2 == 2)
         {
+            punto4.SetActive(true);
             punto5.SetActive(true);
             p2.SetActive(true);
             button.SetActive(true);
+            Time.timeScale = 0f;
         }
-        else if (puntos == 3)
+        else if (puntos2 == 3)
         {
+            punto4.SetActive(true);
+            punto5.SetActive(true);
             punto6.SetActive(true);
             p2.SetActive(true);
             button.SetActive(true);
+            Time.timeScale = 0f;
         }
 
 
@@ -85,6 +97,23 @@ public class GameManager : MonoBehaviour
     public void Reseteo()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        Time.timeScale = 1f;
+
+        punto1.SetActive(false);
+        punto2.SetActive(false);
+        punto3.SetActive(false);
+        punto4.SetActive(false);
+        punto5.SetActive(false);
+        punto6.SetActive(false);
+
+        p1.SetActive(false);
+        p2.SetActive(false);
+
+
+        button.SetActive(false);
+
+
     }
 }
 
