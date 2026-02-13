@@ -3,11 +3,20 @@ using UnityEngine;
 public class BulletDestuctión : MonoBehaviour
 {
    public  GameObject esplosion;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);
-        Instantiate(esplosion);
-        Destroy(esplosion, 1f);
+
+        if (collision.gameObject.CompareTag("Bala") && gameObject.CompareTag("Bala2"))
+        {
+            Vector3 objectPosition = gameObject.transform.position;
+            Destroy(gameObject);
+            Instantiate(esplosion, objectPosition, Quaternion.identity);
+
+
+
+        }
+
     }
 
 }
+

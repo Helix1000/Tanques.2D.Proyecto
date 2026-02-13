@@ -4,7 +4,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
-
+    
     public GameObject esplosion;
 
     [SerializeField] float speed = 30f;
@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
     private Vector2 direction;
     private void Awake()
     {
+
         rb = GetComponent<Rigidbody2D>();
     }
     public void Shoot(Vector2 direction)
@@ -26,9 +27,9 @@ public class Bullet : MonoBehaviour
         baunces--;
         if (baunces < 0)
         {
+            Vector3 objectPosition = gameObject.transform.position;
             Destroy(gameObject);
-           
-            Instantiate(esplosion);
+            Instantiate(esplosion, objectPosition, Quaternion.identity);
             //Destroy(esplosion, 1f);
             return;
         }
