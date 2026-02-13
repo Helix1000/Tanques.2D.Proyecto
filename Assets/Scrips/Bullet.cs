@@ -5,6 +5,8 @@ public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
 
+    public GameObject esplosion;
+
     [SerializeField] float speed = 30f;
     [SerializeField] int baunces = 1;
 
@@ -25,6 +27,9 @@ public class Bullet : MonoBehaviour
         if (baunces < 0)
         {
             Destroy(gameObject);
+           
+            Instantiate(esplosion);
+            //Destroy(esplosion, 1f);
             return;
         }
         var firstContact = collision.contacts[0];
