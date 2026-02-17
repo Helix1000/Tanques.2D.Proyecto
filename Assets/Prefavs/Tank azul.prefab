@@ -166,3 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d114fb0aa8875204e9fa87bd698bd2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDestuction
+  esplosion: {fileID: 8371984444658199905, guid: b9f2964434b263a488f9bd5a15f65a4b, type: 3}

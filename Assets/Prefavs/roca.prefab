@@ -178,3 +178,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c175d34770d0d664eb33ea0bf557e08e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RockDestruction
+  esplosion: {fileID: 8371984444658199905, guid: b9f2964434b263a488f9bd5a15f65a4b, type: 3}

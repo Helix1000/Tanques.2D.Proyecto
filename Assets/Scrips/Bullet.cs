@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 public class Bullet : MonoBehaviour
 {
@@ -29,8 +30,8 @@ public class Bullet : MonoBehaviour
         {
             Vector3 objectPosition = gameObject.transform.position;
             Destroy(gameObject);
-            Instantiate(esplosion, objectPosition, Quaternion.identity);
-            //Destroy(esplosion, 1f);
+            GameObject clone = (GameObject)Instantiate(esplosion, transform.position, Quaternion.identity);
+            Destroy(clone, 1f);
             return;
         }
         var firstContact = collision.contacts[0];

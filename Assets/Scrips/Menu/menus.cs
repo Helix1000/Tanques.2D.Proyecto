@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class menus : MonoBehaviour
 {
-    public void Empezr(string SampleScene)
+    public void Empezar(string SampleScene)
     {
         SceneManager.LoadScene(SampleScene);
     }

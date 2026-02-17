@@ -1148,7 +1148,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1007270211}
         m_TargetAssemblyTypeName: menus, Assembly-CSharp
-        m_MethodName: Empezr
+        m_MethodName: Empezar
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

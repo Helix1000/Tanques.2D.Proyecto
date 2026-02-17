@@ -6,12 +6,13 @@ public class BulletDestuctión : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Bala") && gameObject.CompareTag("Bala2"))
+        if (collision.gameObject.CompareTag("Bala") || gameObject.CompareTag("Bala2"))
         {
             Vector3 objectPosition = gameObject.transform.position;
-            Destroy(gameObject);
-            Instantiate(esplosion, objectPosition, Quaternion.identity);
-
+            Destroy(collision.gameObject);
+            GameObject clone = (GameObject)Instantiate(esplosion, transform.position, Quaternion.identity);
+            Destroy(clone, 1f);
+            return;
 
 
         }

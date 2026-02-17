@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 475709285771774688}
   - component: {fileID: 7019147856217393653}
   - component: {fileID: 1584198381768651613}
-  - component: {fileID: 5692450128174631664}
   - component: {fileID: 5222862986646020096}
+  - component: {fileID: 5692450128174631664}
+  - component: {fileID: 4837422943946902191}
   m_Layer: 0
   m_Name: GameObjectBala
   m_TagString: Bala
@@ -108,21 +109,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.52833915, y: 0.18006074}
   m_EdgeRadius: 0
---- !u!114 &5692450128174631664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173990067505283906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b40b35d48c4b94b926e7d8717fcdde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  esplosion: {fileID: 8371984444658199905, guid: b9f2964434b263a488f9bd5a15f65a4b, type: 3}
-  speed: -6
-  baunces: 2
 --- !u!212 &5222862986646020096
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -181,3 +167,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5692450128174631664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173990067505283906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b40b35d48c4b94b926e7d8717fcdde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  esplosion: {fileID: 8371984444658199905, guid: b9f2964434b263a488f9bd5a15f65a4b, type: 3}
+  speed: -6
+  baunces: 2
+--- !u!114 &4837422943946902191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173990067505283906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e872fab0d300b1243a30f1a23cc69411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::BulletDestucti\xF3n"
+  esplosion: {fileID: 8371984444658199905, guid: b9f2964434b263a488f9bd5a15f65a4b, type: 3}
