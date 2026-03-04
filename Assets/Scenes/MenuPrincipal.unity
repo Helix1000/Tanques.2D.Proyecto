@@ -560,7 +560,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SceneSelector
+          m_StringArgument: escenario1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &880883821
