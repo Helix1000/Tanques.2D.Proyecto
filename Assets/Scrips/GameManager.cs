@@ -1,32 +1,43 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    [SerializeField] private EventSystem eventSystem;
+    [SerializeField] public GameObject firstButton;
+    [SerializeField] public GameObject secondButton;
 
-    public GameObject buttonNexRaund;
-    public GameObject buttonPlayAgain;
-    public GameObject buttonExit;
-    public GameObject buttonExitToMenu;
+    [SerializeField] public static GameManager Instance;
 
-    public GameObject Panel;
+    [SerializeField] public GameObject buttonNexRaund;
+    [SerializeField] public GameObject buttonPlayAgain;
+    [SerializeField] public GameObject buttonExit;
+    [SerializeField] public GameObject buttonExitToMenu;
+
+    [SerializeField] public GameObject Panel;
 
     int puntos = 0;
     int puntos2 = 0;
 
     [Header("Player1")]
-    public GameObject p1, punto1, punto2, punto3;
+    [SerializeField] public GameObject p1, punto1, punto2, punto3;
 
-    public GameObject scoreP1, score1, score2, score3;
+    [SerializeField] public GameObject scoreP1, score1, score2, score3;
 
     [Header("Player2")]
-    public GameObject p2, punto4, punto5, punto6;
+    [SerializeField] public GameObject p2, punto4, punto5, punto6;
 
-    public GameObject scoreP2, score4, score5, score6;
+    [SerializeField] public GameObject scoreP2, score4, score5, score6;
+
+    private void Reset()
+    {
+        eventSystem = FindFirstObjectByType<EventSystem>();
+
+    }
 
     private void Awake()
     {
@@ -57,7 +68,9 @@ public class GameManager : MonoBehaviour
             scoreP1.SetActive(true);
 
             buttonNexRaund.SetActive(true);
-            Pause();
+            buttonExit.SetActive(true);
+
+            StartCoroutine(Pause());
         }
         else if (puntos == 2)
         {
@@ -72,7 +85,9 @@ public class GameManager : MonoBehaviour
             scoreP1.SetActive(true);
 
             buttonNexRaund.SetActive(true);
-            Pause();
+            buttonExit.SetActive(true);
+
+            StartCoroutine(Pause());
         }
         else if (puntos == 3)
         {
@@ -91,7 +106,12 @@ public class GameManager : MonoBehaviour
             buttonPlayAgain.SetActive(true);
             buttonExitToMenu.SetActive(true);
             buttonExit.SetActive(true);
-            Pause();
+
+
+            eventSystem.firstSelectedGameObject =secondButton;
+
+
+            StartCoroutine(Pause());
         }
 
 
@@ -110,7 +130,9 @@ public class GameManager : MonoBehaviour
             scoreP2.SetActive(true);
 
             buttonNexRaund.SetActive(true);
-            Pause();
+            buttonExit.SetActive(true);
+
+            StartCoroutine(Pause());
         }
         else if (puntos2 == 2)
         {
@@ -125,8 +147,9 @@ public class GameManager : MonoBehaviour
             scoreP2.SetActive(true);
 
             buttonNexRaund.SetActive(true);
-          
-            Pause();
+            buttonExit.SetActive(true);
+
+           StartCoroutine(Pause());
         }
         else if (puntos2 == 3)
         {
@@ -145,7 +168,12 @@ public class GameManager : MonoBehaviour
             buttonPlayAgain.SetActive(true);
             buttonExitToMenu.SetActive(true);
             buttonExit.SetActive(true);
-            Pause();
+
+
+            eventSystem.firstSelectedGameObject = secondButton;
+
+
+            StartCoroutine(Pause());
         }
 
 
@@ -153,10 +181,11 @@ public class GameManager : MonoBehaviour
 
     public void NexRaund()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
         Time.timeScale = 1f;
 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+       
         Panel.SetActive(false);
 
         punto1.SetActive(false);
@@ -168,11 +197,14 @@ public class GameManager : MonoBehaviour
 
         p1.SetActive(false);
         p2.SetActive(false);
+        //for (int i = 0; i < length; i++)
+        //{
 
-       
+        //}
+
 
         buttonNexRaund.SetActive(false);
-
+        buttonExit.SetActive(false);
 
     }
     public void PlayAgain()
