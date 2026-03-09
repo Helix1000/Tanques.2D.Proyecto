@@ -9,15 +9,15 @@ public class BulletDestuctión : MonoBehaviour
         if (collision.gameObject.CompareTag("Bala") || gameObject.CompareTag("Bala2"))
         {
             Vector3 objectPosition = gameObject.transform.position;
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             GameObject clone = (GameObject)Instantiate(esplosion, transform.position, Quaternion.identity);
-            Destroy(clone, 1f);
+            Destroy(clone, 1.0f);
             return;
 
 
         }
 
     }
-
+    
 }
 

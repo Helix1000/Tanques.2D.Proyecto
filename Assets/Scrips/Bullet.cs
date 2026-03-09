@@ -29,9 +29,9 @@ public class Bullet : MonoBehaviour
         if (baunces < 0)
         {
             Vector3 objectPosition = gameObject.transform.position;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             GameObject clone = (GameObject)Instantiate(esplosion, transform.position, Quaternion.identity);
-            Destroy(clone, 1f);
+            Destroy(clone, 1.0f);
             return;
         }
         var firstContact = collision.contacts[0];
@@ -43,4 +43,5 @@ public class Bullet : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+   
 }

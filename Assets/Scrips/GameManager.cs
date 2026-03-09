@@ -7,6 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
+   
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] public GameObject firstButton;
     [SerializeField] public GameObject secondButton;
@@ -33,12 +34,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public GameObject scoreP2, score4, score5, score6;
 
-    private void Reset()
-    {
-        eventSystem = FindFirstObjectByType<EventSystem>();
-
-    }
-
+   
     private void Awake()
     {
 
@@ -108,7 +104,7 @@ public class GameManager : MonoBehaviour
             buttonExit.SetActive(true);
 
 
-            eventSystem.firstSelectedGameObject =secondButton;
+            eventSystem.firstSelectedGameObject = secondButton;
 
 
             StartCoroutine(Pause());
@@ -149,7 +145,7 @@ public class GameManager : MonoBehaviour
             buttonNexRaund.SetActive(true);
             buttonExit.SetActive(true);
 
-           StartCoroutine(Pause());
+            StartCoroutine(Pause());
         }
         else if (puntos2 == 3)
         {
@@ -185,7 +181,7 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-       
+
         Panel.SetActive(false);
 
         punto1.SetActive(false);
@@ -197,10 +193,6 @@ public class GameManager : MonoBehaviour
 
         p1.SetActive(false);
         p2.SetActive(false);
-        //for (int i = 0; i < length; i++)
-        //{
-
-        //}
 
 
         buttonNexRaund.SetActive(false);
@@ -209,9 +201,14 @@ public class GameManager : MonoBehaviour
     }
     public void PlayAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         Time.timeScale = 1f;
+
+        eventSystem.firstSelectedGameObject = firstButton;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
         puntos = 0;
         puntos2 = 0;
 
@@ -254,7 +251,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Pause()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(0f);
         Time.timeScale = 0f;
     }
 }
