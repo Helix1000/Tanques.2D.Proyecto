@@ -290,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   bulletPrefab: {fileID: 5692450128174631664, guid: d9d6616fd5621e6408ca38169a0e16b9, type: 3}
   bulletSpawnPos: {fileID: 5570796222133783037}
+  panelpausa: {fileID: 8361187931079890421, guid: 36d9302072b99714b8e8e25db5f91062, type: 3}
   turnSpeed: -200
   moveSpeed: -200
   rotateSpeed: 500

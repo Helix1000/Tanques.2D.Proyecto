@@ -27,10 +27,14 @@ public class GameManager : MonoBehaviour
     [Header("Player1")]
     [SerializeField] public GameObject p1, punto1, punto2, punto3;
 
+    [SerializeField] public GameObject win1;
+
     [SerializeField] public GameObject scoreP1, score1, score2, score3;
 
     [Header("Player2")]
     [SerializeField] public GameObject p2, punto4, punto5, punto6;
+
+    [SerializeField] public GameObject win2;
 
     [SerializeField] public GameObject scoreP2, score4, score5, score6;
 
@@ -65,6 +69,7 @@ public class GameManager : MonoBehaviour
 
             buttonNexRaund.SetActive(true);
             buttonExit.SetActive(true);
+            buttonExitToMenu.SetActive(true);
 
             StartCoroutine(Pause());
         }
@@ -82,6 +87,7 @@ public class GameManager : MonoBehaviour
 
             buttonNexRaund.SetActive(true);
             buttonExit.SetActive(true);
+            buttonExitToMenu.SetActive(true);
 
             StartCoroutine(Pause());
         }
@@ -103,6 +109,7 @@ public class GameManager : MonoBehaviour
             buttonExitToMenu.SetActive(true);
             buttonExit.SetActive(true);
 
+            win1.SetActive(true);
 
             eventSystem.firstSelectedGameObject = secondButton;
 
@@ -127,6 +134,7 @@ public class GameManager : MonoBehaviour
 
             buttonNexRaund.SetActive(true);
             buttonExit.SetActive(true);
+            buttonExitToMenu.SetActive(true);
 
             StartCoroutine(Pause());
         }
@@ -144,6 +152,7 @@ public class GameManager : MonoBehaviour
 
             buttonNexRaund.SetActive(true);
             buttonExit.SetActive(true);
+            buttonExitToMenu.SetActive(true);
 
             StartCoroutine(Pause());
         }
@@ -164,6 +173,8 @@ public class GameManager : MonoBehaviour
             buttonPlayAgain.SetActive(true);
             buttonExitToMenu.SetActive(true);
             buttonExit.SetActive(true);
+
+            win2.SetActive(true);
 
 
             eventSystem.firstSelectedGameObject = secondButton;
@@ -197,6 +208,7 @@ public class GameManager : MonoBehaviour
 
         buttonNexRaund.SetActive(false);
         buttonExit.SetActive(false);
+        buttonExitToMenu.SetActive(false);
 
     }
     public void PlayAgain()
@@ -238,6 +250,9 @@ public class GameManager : MonoBehaviour
         buttonPlayAgain.SetActive(false);
         buttonExitToMenu.SetActive(false);
         buttonExit.SetActive(false);
+
+        win1.SetActive(false);
+        win2.SetActive(false);
     }
     public void ExitToMenu(string SampleScene)
     {

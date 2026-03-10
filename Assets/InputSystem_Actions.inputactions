@@ -100,7 +100,7 @@
                     "name": "Previous",
                     "type": "Button",
                     "id": "2776c80d-3c14-4091-8c56-d04ced07a2b0",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -118,6 +118,15 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "641cd816-40e6-41b4-8c3d-04687c349290",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pausa",
+                    "type": "Button",
+                    "id": "0dfbbfbe-0a19-49ba-86a3-27aa49bac783",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -639,6 +648,28 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a7461ba-7995-40b9-8fcf-c033e9de5a30",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce99d90f-05c6-46d4-bab9-0af0f37e3605",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

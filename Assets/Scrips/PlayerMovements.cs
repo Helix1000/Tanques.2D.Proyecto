@@ -3,8 +3,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovements : MonoBehaviour
 {
+
     [SerializeField] Bullet bulletPrefab;
     [SerializeField] Transform bulletSpawnPos;
+
+   
 
     public float turnSpeed;
     public float moveSpeed;
@@ -28,14 +31,16 @@ public class PlayerMovements : MonoBehaviour
     private Vector2 moveAction;
     private Vector2 rotateAction;
 
+
     Rigidbody2D rb2D;
-   
+
     private void Awake()
     {
-       // turnAction = InputSystem.actions.FindAction("Turn");
-       // moveAction = InputSystem.actions.FindAction("Move");
+        // turnAction = InputSystem.actions.FindAction("Turn");
+        // moveAction = InputSystem.actions.FindAction("Move");
         rb2D = GetComponent<Rigidbody2D>();
     }
+   
     public void OnMove(InputValue value)
     {
         moveAction = value.Get<Vector2>();
@@ -67,7 +72,7 @@ public class PlayerMovements : MonoBehaviour
         //Vector2 moveInput = moveAction.ReadValue<Vector2>();
         rb2D.linearVelocity = transform.up * moveAction.y * moveSpeed * Time.fixedDeltaTime;
 
-        if( ancla != null )
+        if (ancla != null)
         {
             //Vector2 turnInput = turnAction.ReadValue<Vector2>();
             ancla.transform.Rotate(0, 0, GiroAction.x * giroSpeed * Time.fixedDeltaTime);
@@ -75,14 +80,14 @@ public class PlayerMovements : MonoBehaviour
             //Vector2 rotateInput = RotateAction.ReadValue<Vector2>();
             ancla.transform.Rotate(0, 0, rotateAction.x * rotateSpeed * Time.fixedDeltaTime);
         }
-     
+
     }
     private void Update()
     {
         // Agregamos la condición de tiempo y límite de balas
         if (shootAction && Time.time >= siguienteDisparo)
         {
-            if (GameObject.FindGameObjectsWithTag("Bala").Length < 3 
+            if (GameObject.FindGameObjectsWithTag("Bala").Length < 3
                 && GameObject.FindGameObjectsWithTag("Bala2").Length < 3)
             {
                 Disparar();
@@ -106,4 +111,5 @@ public class PlayerMovements : MonoBehaviour
         // Le pasamos la dirección y una referencia a este script para avisar cuando se destruya
         newBullet.Shoot(direccionDisparo.normalized);
     }
+   
 }

@@ -57,6 +57,10 @@ PrefabInstance:
       value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 3112084196648995637, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
+      propertyPath: panelpausa
+      value: 
+      objectReference: {fileID: 8361187931079890421, guid: 36d9302072b99714b8e8e25db5f91062, type: 3}
+    - target: {fileID: 3112084196648995637, guid: cbbe4cf91d897124d9595b64181ad317, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 5692450128174631664, guid: cacd0f57f3f6110418a41540add3c853, type: 3}
