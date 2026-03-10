@@ -668,7 +668,7 @@
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": ";Gamepad",
                     "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false

@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class RockDestruction : MonoBehaviour
 {
+    [SerializeField] AudioSource fuenteDeAudio;
+    [SerializeField] AudioClip sonidoExplosion;
+
     int golpes;
 
     public GameObject esplosion;
@@ -17,7 +20,7 @@ public class RockDestruction : MonoBehaviour
             Destroy(clone, 1.0f);
             if (golpes == 3)
             {
-
+                fuenteDeAudio.PlayOneShot(sonidoExplosion);
                 Destroy(gameObject);
                 return;
             }

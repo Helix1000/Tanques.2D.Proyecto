@@ -1,47 +1,70 @@
-using System.Linq;
 using UnityEngine;
-using static UnityEngine.UI.Image;
 
 public class Bullet : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    
-    public GameObject esplosion;
+    [SerializeField] AudioSource fuenteDeAudio;
+    [SerializeField] AudioClip sonidoHit;
+    [SerializeField] AudioClip sonidoExplosion;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] GameObject esplosionPrefab; 
 
     [SerializeField] float speed = 30f;
-    [SerializeField] int baunces = 1;
+    [SerializeField] int bounces = 2; 
 
     private Vector2 direction;
+
     private void Awake()
     {
+         rb = GetComponent<Rigidbody2D>();
 
-        rb = GetComponent<Rigidbody2D>();
     }
+
     public void Shoot(Vector2 direction)
     {
-        this.direction = direction;
-
+        this.direction = direction.normalized;
         rb.linearVelocity = this.direction * speed;
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        baunces--;
-        if (baunces < 0)
+        bounces--;
+
+        if (bounces <= 0)
         {
-            Vector3 objectPosition = gameObject.transform.position;
-            gameObject.SetActive(false);
-            GameObject clone = (GameObject)Instantiate(esplosion, transform.position, Quaternion.identity);
-            Destroy(clone, 1.0f);
-            return;
+            Explode();
         }
-        var firstContact = collision.contacts[0];
-        Vector2 newVelocity = Vector2.Reflect(direction.normalized, firstContact.normal);
-        Shoot(newVelocity.normalized);
+        else
+        {
+            
+            fuenteDeAudio.PlayOneShot(sonidoHit);
+
+           
+            var firstContact = collision.contacts[0];
+            Vector2 newVelocity = Vector2.Reflect(direction, firstContact.normal);
+            Shoot(newVelocity);
+        }
     }
+
+    private void Explode()
+    {
+      
+        GameObject clone = Instantiate(esplosionPrefab, transform.position, Quaternion.identity);
+        Destroy(clone, 1.0f);
+
+        
+        AudioSource.PlayClipAtPoint(sonidoExplosion, transform.position, 5.0f);
+
+        
+        gameObject.SetActive(false);
+      
+    }
+
     private void FixedUpdate()
     {
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        if (direction != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
     }
-   
 }

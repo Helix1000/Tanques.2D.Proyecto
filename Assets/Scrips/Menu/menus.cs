@@ -3,9 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class menus : MonoBehaviour
 {
-    public GameObject plano;
+    public GameObject planoOtions;
 
-    public GameObject tilemap;
+    public GameObject tileMapPlayer;
+
+    public GameObject tilemapExplicacionP1;
+
+    public GameObject tilemapExplicacionP2;
 
     public GameObject start, options, exit;
 
@@ -19,7 +23,7 @@ public class menus : MonoBehaviour
     }
     public void Plane()
     {
-        plano.SetActive(true); 
+        planoOtions.SetActive(true); 
 
         start.SetActive(false); 
         options.SetActive(false); 
@@ -27,7 +31,7 @@ public class menus : MonoBehaviour
     }
     public void Deplane()
     {
-        plano.SetActive(false);
+        planoOtions.SetActive(false);
 
         start.SetActive(true);
         options.SetActive(true);
@@ -35,12 +39,32 @@ public class menus : MonoBehaviour
     }
     public void TileMap()
     {
-        tilemap.SetActive(true);
-        plano.SetActive(false);
+        tileMapPlayer.SetActive(true);
+        planoOtions.SetActive(false);
     }
     public void DeTileMap()
     {
-        tilemap.SetActive(false);
-        plano.SetActive(true);
+        tileMapPlayer.SetActive(false);
+        planoOtions.SetActive(true);
+    }
+    public void TileMapExplicacion1()
+    {
+        tilemapExplicacionP1.SetActive(true);
+        tileMapPlayer.SetActive(false);
+    }
+    public void DeTileMapExplicacion1()
+    {
+        tilemapExplicacionP1.SetActive(false);
+        tileMapPlayer.SetActive(true);
+    }
+    public void TileMapExplicacion2()
+    {
+        tilemapExplicacionP2.SetActive(true);
+        tileMapPlayer.SetActive(false);
+    }
+    public void DeTileMapExplicacion2()
+    {
+        tilemapExplicacionP2.SetActive(false);
+        tileMapPlayer.SetActive(true);
     }
 }

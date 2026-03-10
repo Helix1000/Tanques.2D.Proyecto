@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovements : MonoBehaviour
 {
+    [SerializeField] AudioClip spnidoShoot;
+    [SerializeField] AudioSource fuenteDeAudio;
 
     [SerializeField] Bullet bulletPrefab;
     [SerializeField] Transform bulletSpawnPos;
@@ -92,6 +94,7 @@ public class PlayerMovements : MonoBehaviour
             {
                 Disparar();
                 siguienteDisparo = Time.time + cadencia;
+                fuenteDeAudio.PlayOneShot(spnidoShoot);
             }
 
             // Si quieres que no sea ráfaga automática, apaga el trigger
